@@ -1,0 +1,117 @@
+
+/* ===== BACKGROUND WITH SHAPES ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #5391a7, #134b70);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3px);
+  opacity: 0.48;
+  animation: float 8s infinite ease-in-out;
+}
+
+.circle1 {
+  width: 180px;
+  height: 180px;
+  background: #ffffff;
+  top: 5%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.circle2 {
+  width: 250px;
+  height: 250px;
+  background: #fffdc7;
+  bottom: 10%;
+  right: 8%;
+  animation-delay: 1s;
+}
+
+.circle3 {
+  width: 120px;
+  height: 120px;
+  background: #d1f1ff;
+  bottom: 20%;
+  left: 5%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* ===== LOGIN CARD ===== */
+.login-card {
+  width: 430px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px 45px;
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 10;
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from {transform: scale(0.92); opacity: 0;}
+  to {transform: scale(1); opacity: 1;}
+}
+
+/* Logo style */
+.logo-circle {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Form Inputs */
+.form-control {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #d0d8e0;
+  transition: 0.2s;
+}
+.form-control:focus {
+  border-color: #4caee3;
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.18);
+}
+
+/* Button */
+.btn-login {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s;
+}
+.btn-login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 115, 255, 0.35);
+}
+
+/* Links */
+a {
+  color: #007bff;
+  font-weight: 600;
+}
+a:hover {
+  text-decoration: underline;
+}

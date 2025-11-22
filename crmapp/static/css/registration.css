@@ -1,0 +1,122 @@
+:root {
+    --accent: #1a73e8;
+    /* blue accent */
+    --glass-bg: #ffffff;
+    /* full white cards */
+    --glass-border: rgba(0, 0, 0, 0.12);
+    /* soft border */
+    --glass-blur: 0px;
+    /* no blur */
+}
+
+/* Base */
+body {
+    background: #ffffff;
+    /* whole page white */
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    /* dark text */
+    padding-bottom: 40px;
+}
+
+/* top strip */
+.top-strip {
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 8px 18px;
+    font-size: 13px;
+}
+
+.top-strip .small-text {
+    opacity: 1;
+    color: #555
+}
+
+.top-strip .socials a {
+    color: #555;
+    margin-left: 10px;
+    font-size: 16px
+}
+
+.top-strip .socials a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+    transition: all .2s
+}
+
+/* NAV */
+.navbar-glass {
+    background: #ffffff;
+    border-bottom: 1px solid #efefef;
+    padding: 18px 18px;
+}
+
+.navbar-brand .logo {
+    width: 54px;
+    height: 54px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.brand-title {
+    font-weight: 700;
+    color: #111
+}
+
+.brand-sub {
+    font-size: 12px;
+    color: #777
+}
+/* Glass Card → Clean White Card */
+.glass-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 35px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    animation: fadeUp .7s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inputs */
+.form-control {
+    background: #ffffff;
+    border: 1px solid #d0d4da;
+    color: #222;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.form-label {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.btn-primary {
+    background: #1a73e8;
+    border: none;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+    transition: .18s;
+}
+.btn-primary:hover {
+    transform: scale(1.07);
+    background: #0f62d4;
+}

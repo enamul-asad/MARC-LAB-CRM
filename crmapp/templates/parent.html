@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <script src="js/bootstrap.bundle.js" rel="javascript" type="text/javascript"></script>
+    <link rel="icon" href="images/favicon.0f31d2ea.ico">
+    <title>CRM For MARC Lab.</title>
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/crmappcss.css' %}" rel="stylesheet" />
+    <script src="{% static 'js/bootstrap.bundle.js' %}" rel="javascript" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row bg-danger text-light text-center">
+            <div class="col-sm-4">
+                Contact No. : +91 8858097678
+            </div>
+            <div class="col-sm-4">
+                Email Address : marc_cure@gmail.com
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12">
+                    Follow Us :
+                    <a href="#" class="nav-item mx-3" style="text-decoration: none;"> 
+                        <i class="bi bi-facebook "  style="text-decoration: none;"></i>
+                    </a>
+                    <a href="#" class="nav-item me-3"  style="text-decoration: none;">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#" class="nav-item me-3"  style="text-decoration: none;">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="{% url 'crmapp:index' %}">
+                        <img src="{% static 'images/logo.jpg' %}" alt="logo" class="rounded" height="50px" width="50px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{% url 'crmapp:index' %}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'crmapp:aboutus' %}">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'crmapp:registration' %}">Customer Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'crmapp:login' %}">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="{% url 'crmapp:contactus' %}">Contact Us</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="row bg-secondary">
+            <div id="carouselExample" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active ">
+                        <img src="{% static 'images/image1.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{% static 'images/image2.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{% static 'images/image3.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item ">
+                        <img src="{% static 'images/image4.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3" style="background-color: aqua; min-height: 600px;"></div>
+            <div class="col-sm-9" style="background-color: whitesmoke; min-height: 600px;">
+                {% block body %}
+
+
+                {% endblock body %}
+            </div>
+        </div>
+              <!-- Footer -->
+   <footer class="bg-white border-bottom border-top">
+    <div class="container">
+       <div class="row no-gutters">
+          <div class="col-md-3">
+             <div class="border-right py-5 pr-5">
+                <h6 class="mt-0 mb-4 f-14 text-dark fw-bold">SHOPPING GUIDE</h6>
+                <div class="row no-gutters">
+                   <div class="col-12">
+                      <ul class="list-unstyled nav-link mb-0 " >
+                        <li><a href="#" title="Your Account" class="nav-link">Your Account</a></li>
+                        <li><a href="#" title="Blog Marccure" target="_blank" class="nav-link">Blog</a></li>
+                        <li><a href="#" title="FAQs" class="nav-link">FAQs</a></li>
+                      </ul>
+                   </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-3">
+             <div class="border-right py-5 px-5">
+                <h6 class="mt-0 mb-4 f-14 text-dark fw-bold">INFORMATION</h6>
+                <div class="row no-gutters">
+                   <div class="col-12">
+                      <ul class="list-unstyled mb-0">
+                          <li><a href="#" class="nav-link">Terms & Conditions</a></li>
+                          <li><a href="#" class="nav-link">Privacy Policy</a></li>
+                          <li><a href="#" class="nav-link">Shipping Policy</a></li>
+                     </ul>
+                   </div>
+                 </div>
+             </div>
+          </div>
+
+          <div class="col-md-3">
+             <div class="border-right py-5 px-5">
+                <h6 class="mt-0 mb-4 f-14 text-dark fw-bold">INFORMATION</h6>
+                <div class="row no-gutters">
+                   <div class="col-12">
+                      <ul class="list-unstyled mb-0">
+                        <li><a href="#" class="nav-link" title="About Us">About Us</a></li>
+                        <li><a href="#" class="nav-link" title="Contact Us">Contact Us</a></li>
+                        <li><a href="#" class="nav-link">Our Mission</a> </li>
+                        <li><a href="#" class="nav-link">Infrastructure</a></li>
+                        <li><a target="_blank" href="https://marccure.com/kidney-stone-medicine/" class="nav-link">Kidney stone medicine</a></li>
+                      </ul>
+                   </div>
+                 </div>
+             </div>
+          </div>
+          <div class="col-md-3">
+             <div class="py-5 pl-5">
+                 <h6 class="mt-0 mb-4 f-14 text-dark fw-bold"><i class="icofont-location-pin"></i>Address</h6>
+                 <div class="contacts-info">
+                   <address>3072/41, Gola market, Darya Ganj, DELHI-110002, India.</address>
+                              <div class="mobile"><a href="tel:+919076608818">+919076608818</a>, <a href="tel:++918081343990">+918081343990</a></div>
+                              <div class="phone">Tollfree no: <a href="tel:18008892101">18008892101</a></div>
+                              <div class="email"><a href="mailto:info@marccure.com?Subject=Inquiry">info@marccure.com</a></div>
+                  </div>
+                 <div class="footer-social">
+                   <a href="https://www.facebook.com/Marcayurveda/" class="nav-link"><i class="icofont-facebook icofont-2x"></i></a>
+                   <a href="https://twitter.com/Marcayurveda/" class="nav-link"><i class="icofont-twitter icofont-2x"></i></a>
+                   <a href="https://www.instagram.com/marccureayurveda/" class="nav-link"><i class="icofont-instagram icofont-2x"></i></a>
+                   <a href="https://api.whatsapp.com/send?phone=918081343990" class="nav-link"><i class="icofont-whatsapp icofont-2x"></i></a>
+                   <a href="https://www.linkedin.com/company/marccure/" class="nav-link"><i class="icofont-linkedin icofont-2x"></i></a>
+                   <a href="https://in.pinterest.com/marccureayurveda/_created/" class="nav-link"><i class="icofont-pinterest icofont-2x"></i></a>
+                   <a href="https://www.youtube.com/channel/UCUfTtcxEQ9J4bYYuaUXjeug?view_as=subscriber" class="nav-link"><i class="icofont-youtube icofont-2x"></i></a>
+                </div>
+                 </div>
+          </div>
+       </div>
+    </div>
+    <!-- /.container -->
+ </footer>  
+        <div class="row">
+            <div class="col-sm-6" style="background-color: black; color: white; font-size: 30px; text-align: center;">
+                Copyright &copy; to MARC Lab.</div>
+            <div class="col-sm-6" style="background-color: black; color: white; font-size: 30px; text-align: center;">
+                Developed By : Enamul Haq</div>
+        </div>
+    </div>
+</body>
+
+</html>

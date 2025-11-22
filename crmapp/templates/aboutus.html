@@ -1,0 +1,236 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Us — MARC Lab</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+
+</head>
+<body>
+
+  <!-- Top tiny info bar -->
+  <div class="top-strip d-flex justify-content-between align-items-center px-4">
+    <div class="small-text">Contact: +91 8858097678 &nbsp;|&nbsp; marc_cure@gmail.com</div>
+    <div class="socials">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </div>
+
+  <!-- Main navbar -->
+  <nav class="navbar navbar-expand-lg navbar-glass px-4">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'crmapp:index' %}">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo" class="logo me-2">
+        <div class="brand-text">
+          <div class="brand-title">MARC Lab</div>
+          <div class="brand-sub">Health & Research</div>
+        </div>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+       <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="{% url 'crmapp:index' %}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'crmapp:aboutus' %}">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'crmapp:contactus' %}">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'crmapp:registration' %}">Register</a></li>
+          <li class="nav-item"><a class="btn btn-primary btn-sm ms-lg-3" href="{% url 'crmapp:login' %}">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero d-flex align-items-center text-center text-light">
+    <div class="container">
+      
+      <div class="hero-card glass-card p-4 p-md-5 mx-auto">
+        <h1 class="display-5 fw-bold mb-2">About MARC Lab</h1>
+        <p class="lead mb-3">Trusted healthcare & research-driven solutions — combining traditional wisdom with modern CRM-powered service.</p>
+        <a href="{% url 'crmapp:registration' %}" class="btn btn-outline-light btn-lg">Get Started</a>
+      </div>
+    </div>
+  
+  </header>
+
+  <!-- CONTENT -->
+  <main class="py-5">
+    <div class="container">
+
+      <!-- Who we are + stats -->
+      <div class="row g-4 align-items-center mb-5">
+        <div class="col-lg-7">
+          <div class="glass-section glass-card p-4 p-md-5">
+            <h2 class="mb-3">Who We Are</h2>
+            <p class="text-muted mb-3">
+              MARC Lab is a trusted healthcare and wellness organisation specialising in herbal solutions and patient support.
+              We combine research-backed products with a secure CRM system to deliver personalised and reliable care across India.
+            </p>
+
+            <div class="row text-center mt-4">
+              <div class="col-4">
+                <div class="stat">+</div>
+                <div class="stat-num">10k+</div>
+                <div class="stat-label">Satisfied Users</div>
+              </div>
+              <div class="col-4">
+                <div class="stat">🏆</div>
+                <div class="stat-num">15+</div>
+                <div class="stat-label">Years Experience</div>
+              </div>
+              <div class="col-4">
+                <div class="stat">💬</div>
+                <div class="stat-num">24/7</div>
+                <div class="stat-label">Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar quick links -->
+        <div class="col-lg-5">
+          <aside class="glass-card p-4">
+            <h5 class="mb-3">Quick Links</h5>
+            <ul class="list-unstyled quick-links">
+              <li><i class="bi bi-chevron-right"></i> <a href="{% url 'crmapp:registration' %}">Customer Registration</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{% url 'crmapp:index' %}">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="{% url 'crmapp:aboutus' %}">About Us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Support & FAQ</a></li>
+            </ul>
+
+            <div class="mt-4">
+              <a class="btn btn-primary w-100" href="{% url 'crmapp:contactus' %}"><i class="bi bi-envelope"></i> Contact Us</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Vision / Mission / Values -->
+      <section class="mb-5">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="icon-wrap mb-3"><i class="bi bi-eye"></i></div>
+              <h5>Vision</h5>
+              <p class="small text-muted">To be a leading healthcare provider using innovation and trust to serve everyone.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="icon-wrap mb-3"><i class="bi bi-flag"></i></div>
+              <h5>Mission</h5>
+              <p class="small text-muted">Deliver quality herbal solutions, modern CRM support and trustworthy customer care.</p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="glass-card p-4 h-100">
+              <div class="icon-wrap mb-3"><i class="bi bi-stars"></i></div>
+              <h5>Values</h5>
+              <p class="small text-muted">Integrity • Care • Innovation • Reliability • Excellence</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h3 class="mb-0">Our Team</h3>
+          <small class="text-muted">Experienced professionals, dedicated support</small>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card glass-card p-3 text-center">
+              <img src="{% static 'images/team1.png' %}" alt="team" class="team-img mb-3">
+              <h6 class="mb-0">Dr. Asad</h6>
+              <small class="text-muted">Chief Consultant</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card glass-card p-3 text-center">
+              <img src="{% static 'images/team2.png' %}" alt="team" class="team-img mb-3">
+              <h6 class="mb-0">Rahul</h6>
+              <small class="text-muted">CRM Lead</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card glass-card p-3 text-center">
+              <img src="{% static 'images/team3.png' %}" alt="team" class="team-img mb-3">
+              <h6 class="mb-0">Haseeb</h6>
+              <small class="text-muted">Support Head</small>
+            </div>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <div class="team-card glass-card p-3 text-center">
+              <img src="{% static 'images/team4.jpg' %}" alt="team" class="team-img mb-3">
+              <h6 class="mb-0">Enamul Haq</h6>
+              <small class="text-muted">Fullstack Developer</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section text-center py-4">
+        <div class="glass-card d-inline-block p-4 px-5">
+          <h4 class="mb-2">Ready to join our community?</h4>
+          <p class="mb-3 text-muted">Register now and get personalized support.</p>
+          <a class="btn btn-primary btn-lg" href="{% url 'crmapp:registration' %}">Register Now</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-glass text-center text-muted py-4">
+    <div class="container">
+      <div class="mb-2">© MARC Lab • 2025</div>
+      <div>3072/41, Gola Market, Darya Ganj, Delhi - 110002 • <a href="mailto:info@marccure.com" class="text-secondary">info@marccure.com</a></div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tiny JS: Reveal on scroll -->
+  <script>
+    // simple fade-in on scroll for elements with .glass-card
+    const obs = new IntersectionObserver((entries)=> {
+      entries.forEach(e=>{
+        if (e.isIntersecting) {
+          e.target.classList.add('reveal');
+          obs.unobserve(e.target);
+        }
+      });
+    }, {threshold: 0.12});
+
+    document.querySelectorAll('.glass-card, .hero-card, .team-card').forEach(el=>{
+      obs.observe(el);
+    });
+  </script>
+
+</body>
+</html>
