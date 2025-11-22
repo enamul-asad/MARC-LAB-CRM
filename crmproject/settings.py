@@ -32,13 +32,10 @@ DEBUG = os.getenv("DEBUG") == "True"
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    'marc-lab-crm.onrender.com',
-    'localhost',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = ["*"]
+
 
 
 
